@@ -6,11 +6,26 @@ metadata:
     kind: normalservice
 spec:
   selector:
-    name: saivinay
-    dept: cse
-    year: twenty
+    name: cluster
   ports:
   - name: webport
     protocol: TCP
     ports: 80
     targetPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labelpod
+  namespace: roboshop
+  labels:
+    name: cluster
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    envFrom:
+    - configMapRef:
+        name: configmap 
+
+
