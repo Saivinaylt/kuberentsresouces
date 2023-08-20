@@ -1,0 +1,13 @@
+kind: pod
+apiVersion: v1
+metadata:
+  name: firstpod
+  namespace: roboshop
+  labels:
+    name: web
+    kind: application
+spec:
+  containers:
+  - image: nginx
+    name: weapp
+    conrainerPort: 80
