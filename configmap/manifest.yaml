@@ -1,0 +1,8 @@
+kind: configMap
+apiVersion: v1
+metadata:
+  name: configmap
+  namespace: roboshop
+data:
+  MY_SQL: mysql
+  USER: user
