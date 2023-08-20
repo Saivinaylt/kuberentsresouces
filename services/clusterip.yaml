@@ -2,7 +2,6 @@ kind: Service
 apiVersion: apps/v1
 metadata:
   name: clusreripservice
-  namespace: roboshop
   labels:
     kind: normalservice
 spec:
