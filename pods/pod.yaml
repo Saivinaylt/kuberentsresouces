@@ -1,13 +1,26 @@
+# kind: Pod
+# apiVersion: v1
+# metadata:
+#   name: firstpod
+#   namespace: roboshop
+#   labels:
+#     name: web
+#     kind: application
+# spec:
+#   containers:
+#   - image: nginx
+#     name: weapp
+#     conrainerPort: 80
 kind: Pod
 apiVersion: v1
 metadata:
-  name: firstpod
+  name: labelpod
   namespace: roboshop
   labels:
-    name: web
-    kind: application
+    name: saivinay
+    dept: cse
+    year: twenty
 spec:
   containers:
-  - image: nginx
-    name: weapp
-    conrainerPort: 80
+  - name: nginx
+    image: nginx
