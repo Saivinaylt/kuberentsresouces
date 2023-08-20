@@ -29,4 +29,20 @@ spec:
     - configMapRef:
         name: configmap 
 
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug
+  namespace: roboshop
+  labels:
+    name: cluster
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+
+
+
+
 
