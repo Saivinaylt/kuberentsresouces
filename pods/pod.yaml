@@ -11,6 +11,15 @@
 #   - image: nginx
 #     name: weapp
 #     conrainerPort: 80
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: configmap
+  namespace: roboshop
+data:
+  MY_SQL: mysql
+  USER: user
+---
 apiVersion: v1
 metadata:
   name: labelpod
