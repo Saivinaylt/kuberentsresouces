@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: apps/v1
+metadata:
+  name: clusreripservice
+  namespace: roboshop
+  labels:
+    kind: normalservice
+spec:
+  selector:
+    name: saivinay
+    dept: cse
+    year: twenty
+  ports:
+  - name: webport
+    protocol: TCP
+    ports: 80
+    targetPort: 80
