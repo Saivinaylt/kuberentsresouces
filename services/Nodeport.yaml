@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: clusreripservice
+  labels:
+    kind: normalservice
+spec:
+  type: NodePort
+  selector:
+    name: cluster
+  ports:
+  - name: webport
+    protocol: TCP
+    port: 80
+    targetPort: 80
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labelpod
+  namespace: roboshop
+  labels:
+    name: cluster
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    containerPort: 80
+
+
+
+
+
+
+
